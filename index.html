@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@-webkit-keyframes container-animation {
+0% {-webkit-transform-style:preserve-3d; -webkit-transform:rotateY(-20deg);}
+100% {-webkit-transform-style:preserve-3d; -webkit-transform:rotateY(20deg);}}
+@-webkit-keyframes div-1-animation {
+0% {-webkit-transform: translate(-10px, 0px);}
+100% {-webkit-transform: translate(10px, 0px);}}
+@-webkit-keyframes div-2-animation {
+0% {-webkit-transform: translate(-20px, 0px);}
+100% {-webkit-transform: translate(20px, 0px);}}
+
+@-moz-keyframes container-animation {
+0% {transform-style:preserve-3d; transform:rotateY(-20deg);}
+100% {transform-style:preserve-3d; transform:rotateY(20deg);}}
+@-moz-keyframes div-1-animation {
+0% {transform: translate(-10px, 0px);}
+100% {transform: translate(10px, 0px);}}
+@-moz-keyframes div-2-animation {
+0% {transform: translate(-20px, 0px);}
+100% {transform: translate(20px, 0px);}}
+
+@-o-keyframes container-animation {
+0% {transform-style:preserve-3d; transform:rotateY(-20deg);}
+100% {transform-style:preserve-3d; transform:rotateY(20deg);}}
+@-o-keyframes div-1-animation {
+0% {transform: translate(-10px, 0px);}
+100% {transform: translate(10px, 0px);}}
+@-o-keyframes div-2-animation {
+0% {transform: translate(-20px, 0px);}
+100% {transform: translate(20px, 0px);}}
+
+@keyframes container-animation {
+0% {transform-style:preserve-3d; transform:rotateY(-20deg);}
+100% {transform-style:preserve-3d; transform:rotateY(20deg);}}
+@keyframes div-1-animation {
+0% {transform: translate(-10px, 0px);}
+100% {transform: translate(10px, 0px);}}
+@keyframes div-2-animation {
+0% {transform: translate(-20px, 0px);}
+100% {transform: translate(20px, 0px);}}
+    
+.container-1:hover .div-1 {
+-webkit-animation: div-1-animation 3s infinite;
+-webkit-animation-direction: alternate;
+-moz-animation: div-1-animation 3s infinite;
+-moz-animation-direction: alternate;
+-o-animation: div-1-animation 3s infinite;
+—oanimation-direction: alternate;
+animation: div-1-animation 3s infinite;
+animation-direction: alternate;
+}
+.container-1:hover .div-2 {
+-webkit-animation: div-2-animation 3s infinite;
+-webkit-animation-direction: alternate;
+-moz-animation: div-2-animation 3s infinite;
+-moz-animation-direction: alternate;
+—o-animation: div-2-animation 3s infinite;
+-o-animation-direction: alternate;
+animation: div-2-animation 3s infinite;
+animation-direction: alternate;
+}
+.container-1:hover {
+box-shadow: 0px 0px 10px 10px rgba(90,90,90,0.5);
+-webkit-filter: grayscale(0%);
+-webkit-animation: container-animation 3s infinite;
+-webkit-animation-direction: alternate;
+-moz-filter: grayscale(0%);
+-moz-animation: container-animation 3s infinite;
+-moz-animation-direction: alternate;
+-o-filter: grayscale(0%);
+-o-animation: container-animation 3s infinite;
+—o-animation-direction: alternate;
+filter: grayscale(0%);
+animation: container-animation 3s infinite;
+animation-direction: alternate;
+}
+.container-1:hover .bkg {
+-webkit-filter:blur(1px);
+-moz-filter:blur(1px);
+-o-filter:blur(1px);
+filter:blur(1px);
+}
+.container-1 {
+border-radius: 15px;
+-webkit-filter: grayscale(75%);
+-webkit-transition:all 1s ease;
+-moz-filter: grayscale(75%);
+-moz-transition:all 1s ease;
+-o-filter: grayscale(75%);
+-o-transition:all 1s ease;
+filter: grayscale(75%);
+transition:all 1s ease;
+}
+
+body {
+background-color:rgba(0,186,191,1);
+font-size:100px;
+padding:0;
+margin:0;
+font-family: Futura, Helvetica, Tahoma;
+color:white;
+font-weight:lighter;
+text-align:justify;
+margin-top:5%;
+}
+h2{
+font-size: 74%;
+margin: 0;
+margin-top:15%;
+}
+p{
+font-size: 20%;
+margin: 0 0 40px 0;
+}
+.item-left{
+width:42.5%;
+float:left;
+margin-right:5%;
+margin-left:5%;
+}
+.item-right{
+width:42.5%;
+float:left;
+margin-right:5%;
+}
+.trunks{
+top:310px;
+width:12px;
+height:20px;
+background-color:#BC8D49;
+position:absolute;
+}
+.tri{
+position:absolute;width:0px;height:0px;
+}
+@media screen and (max-width:500px) {
+.mobile-collapse {width: auto;float:none;margin:0;margin-top:5%;}
+.item-left {margin-top:-7.5%;}
+body {margin-top:0;}
+.footer {zoom:0.5;}
+}
+</style>
+<script>
+function resizeImg() {
+var g = document.getElementById("group");
+var e = document.getElementById("container");
+var f = document.getElementById("container-left");
+var ratio = g.offsetWidth/600;
+e.style.zoom = ratio;
+f.style.zoom = ratio;
+}
+</script>
+</head>
+<body onload="resizeImg()" onresize="resizeImg()">
+<div>
+<div class="item-left mobile-collapse">
+<div id="container-left" style="width:600px;height:200px;position:relative;">
+<h2>PHOTO REVIVAL</h2>
+<p>Do you remember those old photos lost in some place of your computer? Soon, you will be able to give a new life to your memories and spread it to your friends. Blur, parallax, shadows and glows are some effects you can use.</p>
+</div>
+</div>
+<div id="group" class="item-right mobile-collapse">
+<div id="container" class="container-1" style="width:600px;height:400px;position:relative;background-color:#e7f4fe;">
+<div class="bkg">
+<div class="tri" style="left:300px;top:90px;border-bottom:250px solid #93a1a5;border-left:150px solid transparent;"></div>
+<div class="tri" style="left:450px;top:90px;border-bottom:250px solid #5e7c81;border-right:150px solid transparent;"></div>
+<div class="tri" style="left:0px;top:40px;border-bottom:300px solid #93a1a5;border-left:200px solid transparent;"></div>
+<div class="tri" style="left:200px;top:40px;border-bottom:300px solid #5e7c81;border-right:200px solid transparent;"></div>
+</div>
+<div style="position:absolute;top:330px;height:70px;left:0px;width:600px;border-radius:0px 0px 15px 15px;background-color:#72e300;font-size:30%;text-align:center;">Play here</div>
+ <div class='div-1' style='position:absolute;left:0px;top:0px;width:600px;height:400px;'>
+<div style="position:absolute;left:152px;top:210px;width:12px;height:120px;background-color:#BC8D49;"></div>
+<div style="position:absolute;left:338px;top:210px;width:12px;height:120px;background-color:#BC8D49;"></div>
+<div style="position:absolute;left:112px;top:138px;width:87px;height:84px;border-radius:50%;background-color:#97D610;"></div>
+<div style="position:absolute;left:158px;top:138px;width:41px;height:84px;border-radius:0 84px 84px 0;background-color:#86BD0F;"></div>
+<div style="position:absolute;left:298px;top:156px;width:87px;height:84px;border-radius:50%;background-color:#97D610;"></div>
+<div style="position:absolute;left:344px;top:156px;width:41px;height:84px;border-radius:0 84px 84px 0;background-color:#86BD0F;"></div>
+<div style='left:16px;' class="trunks"></div>
+<div style='left:215px;' class="trunks"></div>
+<div style='left:418px;' class="trunks"></div>
+<div style='left:537px;' class="trunks"></div>
+<div class="tri" style='left:-5px;top:208px;border-bottom:112px solid #B7EA45;border-left:28px solid transparent;'></div>
+<div class="tri" style='left:182px;top:155px;border-bottom:165px solid #97D610;border-left:41px solid transparent;'></div>
+<div class="tri" style='left:363px;top:101px;border-bottom:219px solid #97D610;border-left:62px solid transparent;'></div>
+<div class="tri" style='left:490px;top:134px;border-bottom:184px solid #B7EA45;border-left:52px solid transparent;'></div>   
+<div class="tri" style='left:23px;top:208px;border-bottom:112px solid #A2CF40;border-right:28px solid transparent;'></div>
+<div class="tri" style='left:223px;top:155px;border-bottom:165px solid #86BD0F;border-right:41px solid transparent;'></div>
+<div class="tri" style='left:425px;top:101px;border-bottom:219px solid #86BD0F;border-right:62px solid transparent;'></div>
+<div class="tri" style='left:542px;top:134px;border-bottom:184px solid #A2CF40;border-right:52px solid transparent;'></div>
+</div>
+ <div class='div-2' style='position:absolute;left:0px;top:0px;width:600px;height:400px;'>
+<div style='left:62px;' class="trunks"></div>
+<div style='left:112px;' class="trunks"></div>
+<div style='left:170px;' class="trunks"></div>
+<div style='left:303px;' class="trunks"></div>
+<div style='left:367px;' class="trunks"></div>
+<div style='left:480px;' class="trunks"></div>
+<div class="tri" style='left:23px;top:163px;border-bottom:157px solid #C4E508;border-left:45px solid transparent;'></div>
+<div class="tri" style='left:135px;top:210px;border-bottom:111px solid #C4E508;border-left:41px solid transparent;'></div>
+<div class="tri" style='left:282px;top:190px;border-bottom:129px solid #C4E508;border-left:28px solid transparent;'></div>
+<div class="tri" style='left:78px;top:186px;border-bottom:136px solid #97D610;border-left:43px solid transparent;'></div>
+<div class="tri" style='left:336px;top:219px;border-bottom:102px solid #B7EA45;border-left:36px solid transparent;'></div>
+<div class="tri" style='left:437px;top:176px;border-bottom:146px solid #C4E508;border-left:50px solid transparent;'></div>
+<div class="tri" style='left:68px;top:163px;border-bottom:157px solid #AAC91F;border-right:45px solid transparent;'></div>
+<div class="tri" style='left:176px;top:210px;border-bottom:111px solid #AAC91F;border-right:50px solid transparent;'></div>
+<div class="tri" style='left:310px;top:190px;border-bottom:129px solid #AAC91F;border-right:28px solid transparent;'></div>
+<div class="tri" style='left:121px;top:186px;border-bottom:136px solid #86BD0F;border-right:43px solid transparent;'></div>
+<div class="tri" style='left:372px;top:219px;border-bottom:102px solid #A2CF40;border-right:36px solid transparent;'></div>
+<div class="tri" style='left:487px;top:176px;border-bottom:146px solid #AAC91F;border-right:50px solid transparent;'></div>
+<div style="position:absolute;left:268px;top:260px;width:12px;height:70px;background-color:#BC8D49;"></div>
+<div style="position:absolute;left:557px;top:260px;width:12px;height:70px;background-color:#BC8D49;"></div>
+<div style="position:absolute;left:240px;top:220px;width:67px;height:64px;border-radius:50%;background-color:#B7EA45;"></div>
+<div style="position:absolute;left:273px;top:220px;width:33px;height:64px;border-radius:0 64px 64px 0;background-color:#A2CF40;"></div>
+<div style="position:absolute;left:530px;top:220px;width:67px;height:64px;border-radius:50%;background-color:#97D610;"></div>
+<div style="position:absolute;left:563px;top:220px;width:33px;height:64px;border-radius:0 64px 64px 0;background-color:#86BD0F;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer" style="width:100%;height:20%;background-color:white;bottom:0;position:absolute;padding:0;margin-top:5px;text-align:center;">
+<h1 style="color:gray;font-size:0.2em;">We are currently working in this awesome app</h1>
+<h3 style="color:gray;font-size:0.4em;font-family:Impact;">STAY TUNED</h3>
+</div>
+</body>
+</html>
